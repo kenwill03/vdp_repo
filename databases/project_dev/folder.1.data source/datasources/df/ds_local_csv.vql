@@ -1,0 +1,9 @@
+﻿# REQUIRES-PROPERTIES-FILE - # Do not remove this comment!
+CREATE OR REPLACE DATASOURCE DF ds_local_csv
+    FOLDER = '/1.data source'
+    ROUTE LOCAL 'LocalConnection' '${databases.project_dev.folder.1..data source.datasources.df.ds_local_csv.ROUTE.LOCAL.PATH}'
+    COLUMNDELIMITER = ','
+    ENDOFLINEDELIMITER = '\n'
+    HEADER = TRUE
+    MULTI_CHARACTER_DELIMITER = TRUE;
+
