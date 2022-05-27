@@ -1,5 +1,5 @@
 ﻿CREATE OR REPLACE WRAPPER DF "bv_ds_local_csv_9b928872-ac08-4341-bd19-e8555dae9de9"
-    FOLDER = '/1.data source'
+    FOLDER = '/2.base view'
     DATASOURCENAME=ds_local_csv
     OUTPUTSCHEMA (
         id = 'id' (OPT),
@@ -12,7 +12,7 @@ CREATE OR REPLACE TABLE bv_ds_local_csv I18N us_pst_pdt (
         c2:text,
         c3:text
     )
-    FOLDER = '/1.data source'
+    FOLDER = '/2.base view'
     CACHE OFF
     TIMETOLIVEINCACHE DEFAULT
     ADD SEARCHMETHOD bv_ds_local_csv(
