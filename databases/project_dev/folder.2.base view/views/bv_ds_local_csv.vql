@@ -10,7 +10,7 @@
 CREATE OR REPLACE TABLE bv_ds_local_csv I18N us_pst_pdt (
         id:text (description = 'aaaa'),
         c2:text (description = 'aaaa'),
-        c3:text (description = 'aaaa')
+        c3:text (description = 'bbbb')
     )
     FOLDER = '/2.base view'
     CACHE OFF
