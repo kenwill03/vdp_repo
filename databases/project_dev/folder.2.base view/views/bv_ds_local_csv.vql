@@ -1,0 +1,29 @@
+﻿CREATE OR REPLACE WRAPPER DF bv_ds_local_csv
+    FOLDER = '/2.base view'
+    DATASOURCENAME=ds_local_csv
+    OUTPUTSCHEMA (
+        id = 'id' (OPT),
+        c2 = 'c2' (OPT),
+        c3 = 'c3' (OPT)
+    );
+
+CREATE OR REPLACE TABLE bv_ds_local_csv I18N us_pst_pdt (
+        id:text,
+        c2:text,
+        c3:text
+    )
+    FOLDER = '/2.base view'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD bv_ds_local_csv(
+        I18N us_pst_pdt
+        CONSTRAINTS (
+             ADD id (any) OPT ANY
+             ADD c2 (any) OPT ANY
+             ADD c3 (any) OPT ANY
+        )
+        OUTPUTLIST (c2, c3, id
+        )
+        WRAPPER (df bv_ds_local_csv)
+    );
+
