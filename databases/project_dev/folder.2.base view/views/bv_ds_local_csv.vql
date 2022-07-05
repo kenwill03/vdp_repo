@@ -8,7 +8,7 @@
     );
 
 CREATE OR REPLACE TABLE bv_ds_local_csv I18N us_pst_pdt (
-        id:text (description = 'cccc'),
+        id:text (description = 'cccc2'),
         c2:text (description = 'cccc'),
         c3:text (description = 'dddd')
     )
